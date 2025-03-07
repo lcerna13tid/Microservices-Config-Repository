@@ -84,9 +84,9 @@ Routes:
         AddHeadersToRequest:
             AgentLogin: Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier] > value[0] > |
     -
-        DownstreamPathTemplate: /api/Policies
+        DownstreamPathTemplate: /api/Policies/{everything}
         DownstreamScheme: http
-        UpstreamPathTemplate: /api/Policies
+        UpstreamPathTemplate: /api/Policies/{everything}
         ServiceName: Microservices.Demo.Policy.API
         UpstreamHttpMethod: 
             - Post
